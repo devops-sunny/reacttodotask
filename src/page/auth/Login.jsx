@@ -47,64 +47,62 @@ const LoginForm = () => {
 
   return (
     <>
-      {isAuthenticated ? 
-      <Home/>
-      : 
-      
-      <section className="loginFormMain">
-      <div className="fullBgImg" />
-      <div className="welcome">
-        <span>L</span>ogo
-      </div>
-      <div className="ct-row">
-        <div className="left-col"></div>
-        <form>
-          <div className="form-main">
-            <div className="title">
-              <h2>Login</h2>
-              <p>Enter Your Details Below.</p>
-            </div>
-            <div className="form-group">
-              <div className="mar-btn">
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  value={formData.username}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mar-btn">
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="form-group">
-              <div className="check-forgotpass">
-                <div className="custom-checkbox"></div>
-
-                <a href="/signup">
-                  <span className="dark-color">New user?</span> Signup
-                </a>
-              </div>
-            </div>
-            {error}
-            <div className="form-group btn-row">
-              <button className="cmn-btn" onClick={handleSubmit}>
-                Login
-              </button>
-            </div>
+      {isAuthenticated ? (
+        <Home />
+      ) : (
+        <section className="loginFormMain">
+          <div className="fullBgImg" />
+          <div className="welcome">
+            <span>L</span>ogo
           </div>
-        </form>
-      </div>
-    </section>
-      }
-     
+          <div className="ct-row">
+            <div className="left-col"></div>
+            <form>
+              <div className="form-main">
+                <div className="title">
+                  <h2>Login</h2>
+                  <p>Enter Your Details Below.</p>
+                </div>
+                <div className="form-group">
+                  <div className="mar-btn">
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder="Username"
+                      value={formData.username}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="mar-btn">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      value={formData.password}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <div className="check-forgotpass">
+                    <div className="custom-checkbox"></div>
+
+                    <a href="/signup">
+                      <span className="dark-color">New user?</span> Signup
+                    </a>
+                  </div>
+                </div>
+                {error}
+                <div className="form-group btn-row">
+                  <button className="cmn-btn" onClick={handleSubmit}>
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      )}
     </>
   );
 };
