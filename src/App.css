@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+/*******Reset css*******/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+a,
+button {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  color: #ff5b00;
+}
+a:hover {
+  text-decoration: none;
+  color: #282828;
+}
+a:focus {
+  text-decoration: none;
+}
+
+:root {
+  --name: rgba(0, 0, 0, 0.65);
+  --dark: rgba(0, 0, 0, 0.5);
+  --gray: rgba(0, 0, 0, 0.25);
+  --primary: rgb(164, 221, 107);
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  font-weight: normal;
+  position: relative;
+  color: #282828;
+  background: radial-gradient(
+    circle at 0.7% 2.7%,
+    rgb(237, 220, 140) 0%,
+    rgb(241, 121, 121) 90%
+  );
+}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+h2 {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+p {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 15px 0;
+}
+.cmn-btn {
+  color: #fff !important;
+  background-color: #ff5b00;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 9px 16px 11px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  border: none !important;
+  cursor: pointer;
+  transition: 400ms ease all;
+}
+.cmn-btn:hover {
+  background-color: #282828;
+}
+input {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.loginFormMain {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.loginFormMain .fullBgImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-position: right 88px center;
+}
+.loginFormMain .fullBgImg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 420px;
+  height: 100%;
+  background-color: #ff7727;
+  z-index: -1;
+}
+.loginFormMain .welcome {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+}
+.loginFormMain .welcome span {
+  background-color: #ff5b00;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 2px;
+  position: relative;
+  line-height: 47px;
+}
+
+.loginFormMain .ct-row {
+  width: 100%;
+  padding: 160px 210px 160px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginFormMain .ct-row .left-col .logo-img {
+  max-width: 355px;
+}
+.loginFormMain .ct-row .form-main {
+  width: 418px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.16);
+  padding: 40px 30px 30px 30px;
+  position: relative;
+  z-index: 1;
+}
+.loginFormMain .ct-row .form-main .title {
+  text-align: center;
+}
+.loginFormMain .ct-row .form-main .title h2 {
+  display: inline-block;
+  border-bottom: 2px solid #ff5b00;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.loginFormMain .ct-row .form-main .title p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.loginFormMain .ct-row form {
+  margin-top: 40px;
+}
+
+.dark-color {
+  color: #000000 !important;
+}
+form .form-group {
+  margin-bottom: 20px;
+}
+form .form-group input {
+  height: 40px;
+  border: 1px solid #bbb6b3;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 12px;
+  color: #282828;
+}
+form .form-group .mar-btn {
+  margin-bottom: 18px;
+}
+
+.input-effect {
+  position: relative;
+}
+.input-effect input {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 17px 30px 20px 16px;
+  border: 1px solid transparent;
+  width: 100%;
+  color: #191919;
+  font-size: 18px;
+  line-height: 30px;
+  transition: 200ms ease all;
+  margin-bottom: 20px;
+}
+.input-effect input:focus {
+  border-color: #144734;
+}
+.input-effect label {
+  color: #bbb6b3;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  transition: 200ms ease all;
+  pointer-events: none;
+  font-weight: 600;
+  padding: 0 5px;
+}
+.input-effect input:focus ~ label,
+.input-effect input:not(:placeholder-shown) ~ label {
+  top: -9px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #ff5b00;
+  background-color: #fff;
+}
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+}
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+.custom-checkbox label {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: pointer;
+}
+.custom-checkbox label:after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 1px solid #282828;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  border-radius: 2px;
+  transition: 400ms ease all;
+}
+.custom-checkbox label:before {
+  content: "";
+  height: 7px;
+  width: 4px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  position: absolute;
+  left: 5px;
+  transform: rotate(-135deg);
+  top: 4px;
+  opacity: 0;
+  z-index: 1;
+}
+.custom-checkbox input:checked ~ label:before {
+  opacity: 1;
+}
+.custom-checkbox input:checked ~ label:after {
+  background-color: #ff5b00;
+  border-color: #ff5b00;
+}
+form .check-forgotpass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .forgot-pass {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+}
+form .btn-row {
+  margin: 40px 0 0 0;
+}
+
+/*  */
+.cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  position: relative;
+  width: 406px;
+  height: 170px;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  transition: height 1s;
+}
+.card:hover {
+  height: 300px;
+}
+.card:hover .card-container {
+  height: 200px;
+}
+.card:hover::after {
+  left: 57.5%;
+  transform: scale(1.3) translate(-50%, -45%);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center;
+  transform: scale(1) translate(-50%, -40%);
+  width: 125px;
+  height: 125px;
+  background-image: url("");
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+  transition: all 1.2s;
+}
+.card-container {
+  height: 70px;
+  transform: translatey(100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  font: 1rem helvetica, sans-serif;
+  text-align: center;
+  overflow: hidden;
+  transition: height 1s;
+}
+.card-container .bio h2 {
+  color: var(--name);
+  margin-bottom: 0.4rem;
+}
+.card-container .bio p {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+.card-container .data {
+  display: flex;
+  list-style-type: none;
+}
+.card-container .data li {
+  width: 143px;
+}
+.card-container .data li span {
+  display: block;
+}
+.card-container .data .count {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+.card-container .data .type {
+  font-size: 0.7rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 1280px) {
+  .loginFormMain .ct-row {
+    padding: 160px 50px 160px 40px;
+  }
+  .loginFormMain .ct-row .left-col .logo-img {
+    max-width: 250px;
+  }
+  .loginFormMain .welcome {
+    left: 40px;
+  }
+  .loginFormMain .fullBgImg:after {
+    width: 300px;
+  }
+  .loginFormMain .fullBgImg {
+    background-position: right 10px center;
+    background-size: 580px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .loginFormMain .ct-row {
+    flex-flow: row wrap;
+  }
+  .loginFormMain .ct-row .left-col {
+    width: 100%;
+  }
+  .loginFormMain .ct-row .form-main {
+    width: 100%;
+    margin-top: 80px;
+  }
+  .loginFormMain .ct-row .left-col .logo-img {
+    margin-top: 30px;
+  }
+  .loginFormMain .fullBgImg:after {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+  }
+  .loginFormMain {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    display: block;
+  }
+  .loginFormMain .welcome {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 40px;
+  }
+  .loginFormMain .ct-row {
+    padding: 0 40px 0 40px;
+  }
+  .loginFormMain .fullBgImg {
+    background-position: center;
+    background-size: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loginFormMain .welcome {
+    padding: 25px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .loginFormMain .welcome span {
+    width: 38px;
+    height: 38px;
+    line-height: 40px;
+  }
+  .loginFormMain .ct-row {
+    padding: 0 25px 50px 25px;
+  }
+  .loginFormMain .ct-row .left-col .logo-img {
+    max-width: 180px;
+    margin-top: 25px;
+  }
+  .loginFormMain .ct-row .form-main {
+    margin-top: 50px;
+  }
+}
