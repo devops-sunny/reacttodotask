@@ -100,8 +100,10 @@ const SignupForm = () => {
                   </div>
                   <div className="mar-btn">
                     <input
-                      type="tel"
+                      type="number"
                       name="phoneNumber"
+                      min="1"
+                      max="10"
                       placeholder="Phone Number"
                       value={phoneNumber}
                       onChange={handleChange}
